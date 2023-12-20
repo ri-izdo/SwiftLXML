@@ -8,8 +8,7 @@
 import Foundation
 
 public struct SwiftLXML {
-    
-    public func ReadXMLDocument(filePath: String) throws -> Any? {
+    public func ReadXMLDocument(filePath: String) throws -> XMLDocument? {
         do {
             let xmlData = try Data(contentsOf: URL(fileURLWithPath: filePath))
             
@@ -22,3 +21,4 @@ public struct SwiftLXML {
         }
     }
 }
+
