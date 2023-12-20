@@ -9,6 +9,7 @@ import Foundation
 
 public struct SwiftLXML {
     public init() {}
+    
     public func ReadXMLDocument(filePath: String) throws -> XMLDocument? {
         do {
             let xmlData = try Data(contentsOf: URL(fileURLWithPath: filePath))
@@ -17,9 +18,12 @@ public struct SwiftLXML {
             
         } catch {
             print("Error reading XML Document: \(error)")
-            
             return nil
         }
+    }
+    
+    public func xmlNodes(xmlDoc: XMLNode, xpath: String) throws -> [XMLNode] {
+        return try xmlDoc.nodes(forXPath: xpath)
     }
 }
 
