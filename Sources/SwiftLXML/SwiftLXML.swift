@@ -9,7 +9,7 @@ import Foundation
 
 public struct SwiftLXML {
     
-    func ReadXMLDocument(filePath: String) throws -> Any? {
+    public func ReadXMLDocument(filePath: String) throws -> Any? {
         do {
             let xmlData = try Data(contentsOf: URL(fileURLWithPath: filePath))
             
