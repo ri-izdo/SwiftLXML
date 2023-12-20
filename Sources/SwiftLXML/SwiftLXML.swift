@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SwiftLXML {
+public struct SwiftLXML {
     
     func ReadXMLDocument(filePath: String) throws -> Any? {
         do {
